@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>烽台前端小组</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="项目中遇到的问题，在这里和大家分享一下同时做个记录，有需要欢迎随时沟通！ 需求：实现如下图级联地址选择器,要求可根据返回数据进行回显并可以修改。  技术栈：vue,element-ui 1.先来介绍下此组件如何使用首先准备一份json格式的地址，在此为您呈上：https://segmentfault.com/a/1190000022382595接下来安装element巴拉巴拉的我就不多说啦。直接说">
+<meta property="og:type" content="article">
+<meta property="og:title" content="烽台前端小组">
+<meta property="og:url" content="http://yoursite.com/2020/04/23/element级联地址选择器使用及无法回显bug/index.html">
+<meta property="og:site_name" content="烽台前端小组">
+<meta property="og:description" content="项目中遇到的问题，在这里和大家分享一下同时做个记录，有需要欢迎随时沟通！ 需求：实现如下图级联地址选择器,要求可根据返回数据进行回显并可以修改。  技术栈：vue,element-ui 1.先来介绍下此组件如何使用首先准备一份json格式的地址，在此为您呈上：https://segmentfault.com/a/1190000022382595接下来安装element巴拉巴拉的我就不多说啦。直接说">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://yoursite.com/img/element/img4.jpg">
+<meta property="og:image" content="http://yoursite.com/img/element/img5.jpg">
+<meta property="og:updated_time" content="2020-04-23T02:54:45.327Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="烽台前端小组">
+<meta name="twitter:description" content="项目中遇到的问题，在这里和大家分享一下同时做个记录，有需要欢迎随时沟通！ 需求：实现如下图级联地址选择器,要求可根据返回数据进行回显并可以修改。  技术栈：vue,element-ui 1.先来介绍下此组件如何使用首先准备一份json格式的地址，在此为您呈上：https://segmentfault.com/a/1190000022382595接下来安装element巴拉巴拉的我就不多说啦。直接说">
+<meta name="twitter:image" content="http://yoursite.com/img/element/img4.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="烽台前端小组" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">烽台前端小组</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/archives">归档</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-element级联地址选择器使用及无法回显bug" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/04/23/element级联地址选择器使用及无法回显bug/" class="article-date">
+  <time datetime="2020-04-23T02:49:41.963Z" itemprop="datePublished">2020-04-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>项目中遇到的问题，在这里和大家分享一下同时做个记录，有需要欢迎随时沟通！</p>
+<p><strong>需求：</strong>实现如下图级联地址选择器,要求可根据返回数据进行回显并可以修改。</p>
+<p><img src="/img/element/img4.jpg" alt="image"></p>
+<p><strong>技术栈：</strong>vue,element-ui</p>
+<h5 id="1-先来介绍下此组件如何使用"><a href="#1-先来介绍下此组件如何使用" class="headerlink" title="1.先来介绍下此组件如何使用"></a>1.先来介绍下此组件如何使用</h5><p>首先准备一份json格式的地址，在此为您呈上：<br><a href="https://segmentfault.com/a/1190000022382595" target="_blank" rel="noopener">https://segmentfault.com/a/1190000022382595</a><br>接下来安装element巴拉巴拉的我就不多说啦。直接说如何使用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-cascader</span><br><span class="line">    v-model=&apos;areaInfo&apos;</span><br><span class="line">    placeholder=&quot;省/市（可搜索）&quot;</span><br><span class="line">    :options=&quot;areaList&quot;</span><br><span class="line">    :props=&quot;&#123; value: &apos;label&apos; &#125;&quot;</span><br><span class="line">    separator=&apos;/&apos; :clearable=true</span><br><span class="line">    filterable @change=&quot;changeArea&quot;&gt;</span><br><span class="line">&lt;/el-cascader&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>其中areaInfo，表示选中的省市。</li>
+<li>options代表全部的地址选项，也就是刚刚的Json问价。</li>
+<li>props表示自定义的属性名称，和你的地址json文件里的属性名叫啥有关系。</li>
+<li>separator表示用啥分隔省市，因为想实现可搜索，所以自定义了‘/’,默认是‘ / ’，前后不输入空格用户搜不出来。</li>
+<li>clearable：是否可清除</li>
+<li>filterable：是否可搜索</li>
+</ul>
+<p>呐，使用步骤就这么多。我发现了一个问题，就是地址回显不出来。也就是无法展示默认地址，接下来我来说说我是如何解决的。</p>
+<h5 id="解决不回显问题"><a href="#解决不回显问题" class="headerlink" title="解决不回显问题"></a>解决不回显问题</h5><p>定义了一个方法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">getTreeDeepArr(key, treeData) &#123;</span><br><span class="line">    let arr = []; // 在递归时操作的数组</span><br><span class="line">    let returnArr = []; // 存放结果的数组</span><br><span class="line">    let depth = 0; // 定义全局层级</span><br><span class="line">    // 定义递归函数</span><br><span class="line">    function childrenEach(childrenData, depthN) &#123;</span><br><span class="line">        for (var j = 0; j &lt; childrenData.length; j++) &#123;</span><br><span class="line">            depth = depthN; // 将执行的层级赋值 到 全局层级</span><br><span class="line">            arr[depthN] = (childrenData[j].label);</span><br><span class="line">            if (childrenData[j].label == key) &#123;</span><br><span class="line">                returnArr = arr.slice(0, depthN+1); //将目前匹配的数组，截断并保存到结果数组，</span><br><span class="line">                break</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                if (childrenData[j].children) &#123;</span><br><span class="line">                    depth ++;</span><br><span class="line">                    childrenEach(childrenData[j].children, depth);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        return returnArr;</span><br><span class="line">    &#125;</span><br><span class="line">    return childrenEach(treeData, depth);</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<p>在获取到地址时，不直接赋值，而是调用这个方法：<br><img src="/img/element/img5.jpg" alt="image.png"><br>其中第一个参数 arg[0]为我要展示的地址，arealist为地址的json文件。<br>如此就可以解决回显不出来的问题啦！</p>
+<p>–感谢大佬阅读–<br>– THE END –</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/04/23/element级联地址选择器使用及无法回显bug/" data-id="ck9c6vppm0001rkurxw4tyb0n" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2019/09/06/element表格折叠问题/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">element表格折叠根据折叠项展示与隐藏</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/echarts/">echarts</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/element/">element</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/elementUI/">elementUI</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/安全/">安全</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/echarts/">echarts</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/element/">element</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">四月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">九月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">八月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">七月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">六月 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/04/23/element级联地址选择器使用及无法回显bug/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/06/element表格折叠问题/">element表格折叠根据折叠项展示与隐藏</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/25/element-elupload/">elementUI的文件上传组件获得当前索引</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/18/frontsecurity/">前端安全问题</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/12/2019-05-18-echarts-wordcloud/">echarts字符云图词云图</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 lizi<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>烽台前端小组</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="烽台前端小组">
+<meta property="og:url" content="http://yoursite.com/page/2/index.html">
+<meta property="og:site_name" content="烽台前端小组">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="烽台前端小组">
+  
+    <link rel="alternate" href="/atom.xml" title="烽台前端小组" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">烽台前端小组</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/archives">归档</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-frontsecurity" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/08/18/frontsecurity/" class="article-date">
+  <time datetime="2019-08-18T06:13:23.000Z" itemprop="datePublished">2019-08-18</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/安全/">安全</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/18/frontsecurity/">前端安全问题</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="前端如何预防xss攻击"><a href="#前端如何预防xss攻击" class="headerlink" title="前端如何预防xss攻击"></a>前端如何预防xss攻击</h1><p>可使用js-xss库（自定义配置过滤规则） ，针对xss问题，一般采用前端在回显时过滤，后端在输入时过滤。 网址：<a href="http://jsxss.com" target="_blank" rel="noopener">http://jsxss.com</a></p>
+<h1 id="前端避免明文传输"><a href="#前端避免明文传输" class="headerlink" title="前端避免明文传输"></a>前端避免明文传输</h1><p>可以采用MD5、hase或者加密策略</p>
+<h1 id="漏扫如果提示表单采用get方式提交-需要在表单标签加method-”post”避免此问题。"><a href="#漏扫如果提示表单采用get方式提交-需要在表单标签加method-”post”避免此问题。" class="headerlink" title="漏扫如果提示表单采用get方式提交 需要在表单标签加method=”post”避免此问题。"></a>漏扫如果提示表单采用get方式提交 需要在表单标签加method=”post”避免此问题。</h1><h1 id="避免CSRF问题"><a href="#避免CSRF问题" class="headerlink" title="避免CSRF问题"></a>避免CSRF问题</h1><p>前端在请求头增加 xhr.setRequestHeader(“X-CSRFToken”, “验证信息”);</p>
+<h1 id="前端如何采用非对称（公私钥）加密技术"><a href="#前端如何采用非对称（公私钥）加密技术" class="headerlink" title="前端如何采用非对称（公私钥）加密技术"></a>前端如何采用非对称（公私钥）加密技术</h1><p>前端使用jsencrypt配合后端进行公私钥加密解密   网址：<a href="http://www.travistidwell.com/jsencrypt" target="_blank" rel="noopener">http://www.travistidwell.com/jsencrypt</a></p>
+<p>– THE END –</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/08/18/frontsecurity/" data-id="ck9kyjcjj001644urg3xmewxn" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2019-05-18-echarts-wordcloud" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/07/12/2019-05-18-echarts-wordcloud/" class="article-date">
+  <time datetime="2019-07-12T06:13:23.000Z" itemprop="datePublished">2019-07-12</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/echarts/">echarts</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/07/12/2019-05-18-echarts-wordcloud/">echarts字符云图词云图</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="echarts3也支持字符云了"><a href="#echarts3也支持字符云了" class="headerlink" title="echarts3也支持字符云了"></a>echarts3也支持字符云了</h2><p>最近在用echarts2做字符云效果，遇到了一些问题，在网上找解决方案时候偶然间发现echarts3居然也可以做字符云效果了</p>
+<h1 id="效果："><a href="#效果：" class="headerlink" title="效果："></a>效果：</h1><p><img src="/img/echarts-wordcloud/cover.jpg" alt="image2"></p>
+<p>之前用echarts3做字符云效果（type : ‘wordCloud’）都不支持，现在只要我们多导入一个worldcloud.js库就可以用echarts3做字符云了</p>
+<p>点击查看：worldcloud.js<br><a href="/js/echarts-wordcloud/worldcloud.js">引入echarts后引入词云图代码词云核心代码</a></p>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码:"></a>代码:</h1><pre>
+myChart.setOption({
+        title: {
+            text: 'echarts3字符云图展示'
+        },
+        tooltip: {},
+        series: [{
+            type : 'wordCloud',  //类型为字符云
+            shape:'smooth',  //平滑
+            gridSize : 2, //网格尺寸
+            size : ['80%','80%'],
+            //sizeRange : [ 50, 100 ],
+            rotationRange : [ 46, 80 ], //旋转范围
+            data:[
+              {"name": "岁的佛山大佛","value": "200"},
+              {"name": "刚刚","value": "156"},
+              {"name": "斯蒂芬","value": "122"},
+              {"name": "阿萨德","value": "119"},
+              {"name": "下次v","value": "108"},
+              {"name": "刚刚哈哈哈","value": "101"},
+              {"name": "并不百分点","value": "96"},
+              {"name": "热天儿童","value": "84"},
+              {"name": "月踏入影坛","value": "58"},
+              {"name": "体育iu","value": "55"},
+              {"name": "OPPO R9S","value": "46"},
+              {"name": "二套二厅","value": "28"},
+              {"name": "才vbvcnnn","value": "27"},
+              {"name": "建行卡号及客户均可","value": "26"}
+                ],
+        }]
+    });
+</pre>
+
+<p>– THE END –</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/07/12/2019-05-18-echarts-wordcloud/" data-id="ck9kyjcin000644urf2z584a5" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/echarts/">echarts</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-hexoTheme" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/07/06/hexoTheme/" class="article-date">
+  <time datetime="2019-07-06T04:23:53.000Z" itemprop="datePublished">2019-07-06</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/hexo/">hexo</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/07/06/hexoTheme/">hexo 主题使用</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="更换为next主题"><a href="#更换为next主题" class="headerlink" title="更换为next主题"></a>更换为<code>next</code>主题</h2><p>进入hexo站点文件夹</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd your-hexo-site</span><br></pre></td></tr></table></figure>
+
+<p>clone <code>Next</code>代码并存放到 <code>themes/next</code> 目录下（用目前比较火的next主题为例）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/iissnan/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
+
+<p>在站点 <code>_config.yml</code> 中修改:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: next</span><br></pre></td></tr></table></figure>
+        
+          <p class="article-more-link">
+            <a href="/2019/07/06/hexoTheme/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/07/06/hexoTheme/" data-id="ck9kyjcjt001c44urj83jlt4g" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-hexo" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/06/15/hexo/" class="article-date">
+  <time datetime="2019-06-15T06:13:23.000Z" itemprop="datePublished">2019-06-15</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/hexo/">hexo</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/06/15/hexo/">HEXO+Github,搭建属于自己的博客</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a><strong>配置环境</strong></h3><p><a href="https://nodejs.org/" target="_blank" rel="noopener">安装Node</a>（必须）<br>作用：用来生成静态页面的<br>到Node.js官网下载相应平台的最新版本，一路安装即可。</p>
+<p><a href="https://git-scm.com/" target="_blank" rel="noopener">安装Git</a>（必须）<br>作用：把本地的hexo内容提交到github上去.<br>安装Xcode就自带有Git，我就不多说了,windows就去官网下载git。</p>
+<p><a href="https://github.com/" target="_blank" rel="noopener">申请GitHub</a>（必须）<br>作用：是用来做博客的远程创库、域名、服务器之类的，怎么与本地hexo建立连接等下讲。<br>github账号我也不再啰嗦了,没有的话直接申请就行了，跟一般的注册账号差不多，SSH Keys，看你自己了，可以不配制，不配置的话以后每次对自己的博客有改动提交的时候就要手动输入账号密码，配置了就不需要了，怎么配置我就不多说了，网上有很多<a href="https://jingyan.baidu.com/article/a65957f4e91ccf24e77f9b11.html" target="_blank" rel="noopener">教程</a>。</p>
+        
+          <p class="article-more-link">
+            <a href="/2019/06/15/hexo/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/06/15/hexo/" data-id="ck9kyjcji001544ur0gus63q0" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-vueHighLight" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/03/24/vueHighLight/" class="article-date">
+  <time datetime="2019-03-24T11:20:00.000Z" itemprop="datePublished">2019-03-24</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/vue/">vue</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/03/24/vueHighLight/">在Vue中使用highlight.js高亮显示代码</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p> npm install highlight.js</p>
+<h2 id="编码"><a href="#编码" class="headerlink" title="编码"></a>编码</h2> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"> // Vue-cli生成的工程文件的src/main.js</span><br><span class="line">import hljs from &apos;highlight.js&apos;</span><br><span class="line">import &apos;highlight.js/styles/googlecode.css&apos; //样式文件</span><br><span class="line">Vue.directive(&apos;highlight&apos;,function (el) &#123;</span><br><span class="line">  let blocks = el.querySelectorAll(&apos;pre code&apos;);</span><br><span class="line">  blocks.forEach((block)=&gt;&#123;</span><br><span class="line">    hljs.highlightBlock(block)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>p v-html=”html” v-highlight&gt;</p><p></p>
+<p>ps：特别注意v-html=html中的html内容必须包含：<code>&lt;pre&gt;&lt;code&gt;&#39;+html+&#39;&lt;/code&gt;&lt;/pre&gt;</code> pre和code标签</p>
+<p>– THE END –</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/03/24/vueHighLight/" data-id="ck9kyjcit000e44ur9yaed641" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+  <nav id="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/">&laquo; 上一页</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/echarts/">echarts</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/element/">element</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/elementUI/">elementUI</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/video-m3u8/">video.m3u8</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/vue/">vue</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/安全/">安全</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/富文本/">富文本</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/效果/">效果</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/解决办法/">解决办法</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/echarts/">echarts</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/element/">element</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">四月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">十二月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">九月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">八月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">七月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">六月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">三月 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/04/29/彩色变化文字/">彩色变化文字</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/23/element级联地址选择器使用及无法回显bug/">element级联地址选择器使用及无法回显bug</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/16/ckeditor自定义菜单项/">ckeditor自定义菜单项</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/16/vue中video播放.m3u8格式/">vue中video播放.m3u8格式</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/25/html2pdf/">html导出成pdf解决方案</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 lizi<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

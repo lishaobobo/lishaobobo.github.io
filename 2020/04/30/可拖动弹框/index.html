@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>可拖动弹框  | 烽台前端小组</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061// v-dialogDrag: 弹窗拖拽//main.js加自定义指令Vue.directive(&amp;apos;dialogDrag&amp;apos;, &amp;#123;  bind(">
+<meta name="keywords" content="element">
+<meta property="og:type" content="article">
+<meta property="og:title" content="可拖动弹框 ">
+<meta property="og:url" content="http://yoursite.com/2020/04/30/可拖动弹框/index.html">
+<meta property="og:site_name" content="烽台前端小组">
+<meta property="og:description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061// v-dialogDrag: 弹窗拖拽//main.js加自定义指令Vue.directive(&amp;apos;dialogDrag&amp;apos;, &amp;#123;  bind(">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://yoursite.com/img/element/img.png">
+<meta property="og:updated_time" content="2020-04-30T09:00:29.557Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="可拖动弹框 ">
+<meta name="twitter:description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061// v-dialogDrag: 弹窗拖拽//main.js加自定义指令Vue.directive(&amp;apos;dialogDrag&amp;apos;, &amp;#123;  bind(">
+<meta name="twitter:image" content="http://yoursite.com/img/element/img.png">
+  
+    <link rel="alternate" href="/atom.xml" title="烽台前端小组" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">烽台前端小组</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/archives">归档</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-可拖动弹框" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/04/30/可拖动弹框/" class="article-date">
+  <time datetime="2020-04-30T08:52:35.159Z" itemprop="datePublished">2020-04-30</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/element/">element</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      可拖动弹框 
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line">// v-dialogDrag: 弹窗拖拽</span><br><span class="line">//main.js加自定义指令</span><br><span class="line">Vue.directive(&apos;dialogDrag&apos;, &#123;</span><br><span class="line">  bind(el, binding, vnode, oldVnode) &#123;</span><br><span class="line">    const dialogHeaderEl = el.querySelector(&apos;.el-dialog__header&apos;)</span><br><span class="line">    const dragDom = el.querySelector(&apos;.el-dialog&apos;)</span><br><span class="line">    dialogHeaderEl.style.cursor = &apos;move&apos;</span><br><span class="line"></span><br><span class="line">    // 获取原有属性 ie dom元素.currentStyle 火狐谷歌 window.getComputedStyle(dom元素, null);</span><br><span class="line">    const sty = dragDom.currentStyle || window.getComputedStyle(dragDom, null)</span><br><span class="line"></span><br><span class="line">    dialogHeaderEl.onmousedown = (e) =&gt; &#123;</span><br><span class="line">      // 鼠标按下，计算当前元素距离可视区的距离</span><br><span class="line">      const disX = e.clientX - dialogHeaderEl.offsetLeft;</span><br><span class="line">      const disY = e.clientY - dialogHeaderEl.offsetTop;</span><br><span class="line"></span><br><span class="line">      const screenWidth = document.body.clientWidth;</span><br><span class="line">      const screenHeight = document.body.clientHeight;</span><br><span class="line">      const minDragDomLeft = dragDom.offsetLeft;</span><br><span class="line">      const maxDragDomLeft = screenWidth - dragDom.offsetLeft - dragDom.offsetWidth;</span><br><span class="line">      const minDragDomTop = dragDom.offsetTop;</span><br><span class="line">      const maxDragDomTop = screenHeight - dragDom.offsetTop - dragDom.offsetHeight;</span><br><span class="line"></span><br><span class="line">      // 获取到的值带px 正则匹配替换</span><br><span class="line">      let styL, styT</span><br><span class="line"></span><br><span class="line">      // 注意在ie中 第一次获取到的值为组件自带50% 移动之后赋值为px</span><br><span class="line">      if (sty.left.includes(&apos;%&apos;)) &#123;</span><br><span class="line">        styL = +screenWidth * (+sty.left.replace(/\%/g, &apos;&apos;) / 100)</span><br><span class="line">        styT = +screenHeight * (+sty.top.replace(/\%/g, &apos;&apos;) / 100)</span><br><span class="line">      &#125; else &#123;</span><br><span class="line">        styL = +sty.left.replace(/\px/g, &apos;&apos;)</span><br><span class="line">        styT = +sty.top.replace(/\px/g, &apos;&apos;)</span><br><span class="line">      &#125;</span><br><span class="line">      document.onmousemove = function(e) &#123;</span><br><span class="line">        // 通过事件委托，计算移动的距离</span><br><span class="line">        var  l = e.clientX - disX;</span><br><span class="line">        var  t = e.clientY - disY;</span><br><span class="line">        // 边界处理</span><br><span class="line">        if (-(l) &gt; minDragDomLeft) &#123;</span><br><span class="line">            l = -minDragDomLeft</span><br><span class="line">        &#125; else if (l &gt; maxDragDomLeft) &#123;</span><br><span class="line">            l = maxDragDomLeft</span><br><span class="line">        &#125;</span><br><span class="line">        if (-(t) &gt; minDragDomTop) &#123;</span><br><span class="line">            t = -minDragDomTop</span><br><span class="line">        &#125; </span><br><span class="line">        else  if (t &gt; maxDragDomTop) &#123;</span><br><span class="line">            t = maxDragDomTop</span><br><span class="line">        &#125;</span><br><span class="line">        // 移动当前元素</span><br><span class="line">        dragDom.style.left = `$&#123;l + styL&#125;px`</span><br><span class="line">        dragDom.style.top = `$&#123;t + styT&#125;px`</span><br><span class="line">      &#125;</span><br><span class="line">      document.onmouseup = function(e) &#123;</span><br><span class="line">        document.onmousemove = null</span><br><span class="line">        document.onmouseup = null</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 增加属性v-dialogDrag --&gt;</span><br><span class="line">&lt;el-dialog title=&quot;提示&quot; :visible.sync=&quot;dialogVisible&quot; width=&quot;30%&quot; v-dialogDrag&gt;</span><br><span class="line">     &lt;div slot=&quot;title&quot; class=&quot;header-title&quot;&gt;</span><br><span class="line">         &lt;span class=&quot;title-name&quot;&gt;</span><br><span class="line">             &lt;i class=&apos;iconfont iconapplications&apos;&gt;&lt;/i&gt;</span><br><span class="line">              自定义标题</span><br><span class="line">         &lt;/span&gt;</span><br><span class="line">     &lt;/div&gt;</span><br><span class="line">     &lt;span&gt;这是一段信息&lt;/span&gt;</span><br><span class="line">     &lt;span slot=&quot;footer&quot; class=&quot;dialog-footer&quot;&gt;</span><br><span class="line">         &lt;el-button @click=&quot;dialogVisible = false&quot; size=&apos;mini&apos;&gt;取 消&lt;/el-button&gt;</span><br><span class="line">         &lt;el-button type=&quot;primary&quot; @click=&quot;dialogVisible = false&quot; size=&apos;mini&apos;&gt;确 定&lt;/el-button&gt;</span><br><span class="line">      &lt;/span&gt;</span><br><span class="line">&lt;/el-dialog&gt;</span><br></pre></td></tr></table></figure>
+
+<p>图解：<br><img src="/img/element/img.png" alt="image.png"><br>–感谢大佬阅读–<br>– THE END –</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/04/30/可拖动弹框/" data-id="ck9mjhdyd000ts0urka83rfnn" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/element/">element</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2020/04/29/彩色变化文字/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">彩色变化文字</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/echarts/">echarts</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/element/">element</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/elementUI/">elementUI</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/video-m3u8/">video.m3u8</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/vue/">vue</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/安全/">安全</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/富文本/">富文本</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/效果/">效果</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/解决办法/">解决办法</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/echarts/">echarts</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/element/">element</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">四月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">十二月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">九月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">八月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">七月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">六月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">三月 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/04/30/可拖动弹框/">可拖动弹框 </a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/29/彩色变化文字/">彩色变化文字</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/23/element级联地址选择器使用及无法回显bug/">element级联地址选择器使用及无法回显bug</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/16/ckeditor自定义菜单项/">ckeditor自定义菜单项</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/16/vue中video播放.m3u8格式/">vue中video播放.m3u8格式</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 lizi<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

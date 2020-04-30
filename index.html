@@ -97,7 +97,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/04/30/可拖动弹框/" data-id="ck9mjm7al000tdsures0zdtkw" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/04/30/可拖动弹框/" data-id="ck9mjnvp7000sbwurqj75t8me" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/element/">element</a></li></ul>
@@ -189,7 +189,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/04/29/彩色变化文字/" data-id="ck9mjm7ao000ydsur5pkwdyjp" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/04/29/彩色变化文字/" data-id="ck9mjnvpb0011bwur3p8re903" class="article-share-link">Share</a>
       
       
     </footer>
@@ -250,7 +250,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/04/23/element级联地址选择器使用及无法回显bug/" data-id="ck9mjm7a30004dsurirsqxrhp" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/04/23/element级联地址选择器使用及无法回显bug/" data-id="ck9mjnvoq0005bwurbu8xfssf" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/element/">element</a></li></ul>
@@ -297,7 +297,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/04/16/vue中video播放.m3u8格式/" data-id="ck9mjm7ak000rdsur57n9dbl5" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/04/16/vue中video播放.m3u8格式/" data-id="ck9mjnvp6000qbwur1ln4khfb" class="article-share-link">Share</a>
       
       
     </footer>
@@ -350,7 +350,50 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/04/16/ckeditor自定义菜单项/" data-id="ck9mjm79y0001dsurr0a2j9t0" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/04/16/ckeditor自定义菜单项/" data-id="ck9mjnvoj0001bwurwlhaezge" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-vueAndIframe" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/12/25/vueAndIframe/" class="article-date">
+  <time datetime="2019-12-25T10:00:00.000Z" itemprop="datePublished">2019-12-25</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/解决办法/">解决办法</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/12/25/vueAndIframe/">vue引入iframe的问题总结</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="由于管理系统里面要有全屏大屏展示的需求所以迫不得已采用vue里面套用iframe方式，全屏操作时让包裹iframe的div"><a href="#由于管理系统里面要有全屏大屏展示的需求所以迫不得已采用vue里面套用iframe方式，全屏操作时让包裹iframe的div" class="headerlink" title="由于管理系统里面要有全屏大屏展示的需求所以迫不得已采用vue里面套用iframe方式，全屏操作时让包裹iframe的div"></a>由于管理系统里面要有全屏大屏展示的需求所以迫不得已采用vue里面套用iframe方式，全屏操作时让包裹iframe的div</h2><h3 id="1-给window绑定了addEventListener事件，然后在离开组件的时候调用removeEventListener移除事件，但是发现没有生效"><a href="#1-给window绑定了addEventListener事件，然后在离开组件的时候调用removeEventListener移除事件，但是发现没有生效" class="headerlink" title="1.给window绑定了addEventListener事件，然后在离开组件的时候调用removeEventListener移除事件，但是发现没有生效"></a>1.给window绑定了addEventListener事件，然后在离开组件的时候调用removeEventListener移除事件，但是发现没有生效</h3><h2 id="正确示例"><a href="#正确示例" class="headerlink" title="正确示例"></a>正确示例</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">created() &#123;</span><br><span class="line">    window.addEventListener(&apos;onmessageWS&apos;, this.wsFunc)</span><br><span class="line">  &#125;,</span><br><span class="line">  beforeDestroy() &#123;</span><br><span class="line">    window.removeEventListener(&apos;onmessageWS&apos;, this.wsFunc)</span><br><span class="line">  &#125;,</span><br><span class="line">methods: &#123;</span><br><span class="line">  wsFunc(e) &#123;</span><br><span class="line">     console.log(1111)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>– THE END –</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/12/25/vueAndIframe/" data-id="ck9mjnvp3000kbwurc610i7tj" class="article-share-link">Share</a>
       
       
     </footer>
@@ -394,50 +437,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/12/25/html2pdf/" data-id="ck9mjm7ac000hdsury6l0kzra" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-vueAndIframe" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/12/25/vueAndIframe/" class="article-date">
-  <time datetime="2019-12-25T10:00:00.000Z" itemprop="datePublished">2019-12-25</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/解决办法/">解决办法</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/25/vueAndIframe/">vue引入iframe的问题总结</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="由于管理系统里面要有全屏大屏展示的需求所以迫不得已采用vue里面套用iframe方式，全屏操作时让包裹iframe的div"><a href="#由于管理系统里面要有全屏大屏展示的需求所以迫不得已采用vue里面套用iframe方式，全屏操作时让包裹iframe的div" class="headerlink" title="由于管理系统里面要有全屏大屏展示的需求所以迫不得已采用vue里面套用iframe方式，全屏操作时让包裹iframe的div"></a>由于管理系统里面要有全屏大屏展示的需求所以迫不得已采用vue里面套用iframe方式，全屏操作时让包裹iframe的div</h2><h3 id="1-给window绑定了addEventListener事件，然后在离开组件的时候调用removeEventListener移除事件，但是发现没有生效"><a href="#1-给window绑定了addEventListener事件，然后在离开组件的时候调用removeEventListener移除事件，但是发现没有生效" class="headerlink" title="1.给window绑定了addEventListener事件，然后在离开组件的时候调用removeEventListener移除事件，但是发现没有生效"></a>1.给window绑定了addEventListener事件，然后在离开组件的时候调用removeEventListener移除事件，但是发现没有生效</h3><h2 id="正确示例"><a href="#正确示例" class="headerlink" title="正确示例"></a>正确示例</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">created() &#123;</span><br><span class="line">    window.addEventListener(&apos;onmessageWS&apos;, this.wsFunc)</span><br><span class="line">  &#125;,</span><br><span class="line">  beforeDestroy() &#123;</span><br><span class="line">    window.removeEventListener(&apos;onmessageWS&apos;, this.wsFunc)</span><br><span class="line">  &#125;,</span><br><span class="line">methods: &#123;</span><br><span class="line">  wsFunc(e) &#123;</span><br><span class="line">     console.log(1111)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>– THE END –</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/12/25/vueAndIframe/" data-id="ck9mjm7ag000ldsurdafacy75" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/12/25/html2pdf/" data-id="ck9mjnvp1000hbwurzsgasrjx" class="article-share-link">Share</a>
       
       
     </footer>
@@ -482,7 +482,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/11/10/多行文本溢出终极解决办法/" data-id="ck9mjm7an000wdsury4hah0bm" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/11/10/多行文本溢出终极解决办法/" data-id="ck9mjnvp9000wbwurkexhj820" class="article-share-link">Share</a>
       
       
     </footer>
@@ -524,7 +524,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/09/12/文件流下载/" data-id="ck9mjm7ap0011dsurrkig9twy" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/09/12/文件流下载/" data-id="ck9mjnvpa000ybwuroqscsjr2" class="article-share-link">Share</a>
       
       
     </footer>
@@ -588,7 +588,7 @@ getRowClass(row, index) {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/09/06/element表格折叠问题/" data-id="ck9mjm7a50006dsur3tw0gkex" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/09/06/element表格折叠问题/" data-id="ck9mjnvos0006bwurkth327ye" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/element/">element</a></li></ul>

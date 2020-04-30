@@ -97,7 +97,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/04/30/可拖动弹框/" data-id="ck9mjhdyd000ts0urka83rfnn" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/04/30/可拖动弹框/" data-id="ck9mjm7al000tdsures0zdtkw" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/element/">element</a></li></ul>
@@ -189,7 +189,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/04/29/彩色变化文字/" data-id="ck9mjhdyh0010s0uryyyc0v6t" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/04/29/彩色变化文字/" data-id="ck9mjm7ao000ydsur5pkwdyjp" class="article-share-link">Share</a>
       
       
     </footer>
@@ -250,11 +250,56 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/04/23/element级联地址选择器使用及无法回显bug/" data-id="ck9mjhdxr0001s0urmvemtube" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/04/23/element级联地址选择器使用及无法回显bug/" data-id="ck9mjm7a30004dsurirsqxrhp" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/element/">element</a></li></ul>
 
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-vue中video播放.m3u8格式" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/04/16/vue中video播放.m3u8格式/" class="article-date">
+  <time datetime="2020-04-16T14:12:00.000Z" itemprop="datePublished">2020-04-16</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/video-m3u8/">video.m3u8</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/04/16/vue中video播放.m3u8格式/">vue中video播放.m3u8格式</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="引入插件"><a href="#引入插件" class="headerlink" title="引入插件"></a>引入插件</h1><p>“videojs-contrib-hls.js”: “^3.2.0”,<br>“vue-video-player”: “^5.0.2”,</p>
+<h3 id="main-js"><a href="#main-js" class="headerlink" title="main.js"></a>main.js</h3><p>import VueVideoPlayer from ‘vue-video-player’;<br>Vue.use(VueVideoPlayer);</p>
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;div class=&quot;player-container&quot;&gt;</span><br><span class="line">      &lt;video-player class=&quot;vjs-custom-skin&quot; ref=&quot;videoPlayer&quot; :options=&quot;playerOptions&quot; @play=&quot;onPlayerPlay($event)&quot;</span><br><span class="line">                @pause=&quot;onPlayerPause($event)&quot;</span><br><span class="line">                @loadeddata=&quot;onPlayerLoadeddata($event)&quot;&gt;&lt;/video-player&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">// 引入video样式</span><br><span class="line">import &apos;video.js/dist/video-js.css&apos;;</span><br><span class="line">import &apos;vue-video-player/src/custom-theme.css&apos;;</span><br><span class="line"></span><br><span class="line">// 引入hls.js</span><br><span class="line">import &apos;videojs-contrib-hls.js/src/videojs.hlsjs&apos;;</span><br><span class="line"></span><br><span class="line">export default &#123;</span><br><span class="line">  data () &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      playerOptions: &#123;</span><br><span class="line">        playbackRates: [0.7, 1.0, 1.5, 2.0], // 播放速度</span><br><span class="line">        autoplay: false, // 如果true,浏览器准备好时开始回放。</span><br><span class="line">        controls: true, // 控制条</span><br><span class="line">        preload: &apos;auto&apos;, // 视频预加载</span><br><span class="line">        muted: false, // 默认情况下将会消除任何音频。</span><br><span class="line">        loop: false, // 导致视频一结束就重新开始。</span><br><span class="line">        language: &apos;zh-CN&apos;,</span><br><span class="line">        aspectRatio: &apos;16:9&apos;, // 将播放器置于流畅模式，并在计算播放器的动态大小时使用该值。值应该代表一个比例 - 用冒号分隔的两个数字（例如&quot;16:9&quot;或&quot;4:3&quot;）</span><br><span class="line">        fluid: true, // 当true时，Video.js player将拥有流体大小。换句话说，它将按比例缩放以适应其容器。</span><br><span class="line">        sources: [&#123;</span><br><span class="line">          type: &apos;application/x-mpegURL&apos;,</span><br><span class="line">          src: hlsUrl</span><br><span class="line">        &#125;],</span><br><span class="line">        poster: &apos;http://static.smartisanos.cn/pr/img/video/video_03_cc87ce5bdb.jpg&apos;, // 你的封面地址</span><br><span class="line">        width: document.documentElement.clientWidth,</span><br><span class="line">        notSupportedMessage: &apos;此视频暂无法播放，请稍后再试&apos; // 允许覆盖Video.js无法播放媒体源时显示的默认信息。</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    onPlayerPlay (player) &#123;</span><br><span class="line">      console.log(&apos;开始播放&apos;);</span><br><span class="line">    &#125;,</span><br><span class="line">    onPlayerPause () &#123;</span><br><span class="line">      console.log(&apos;暂停播放&apos;);</span><br><span class="line">      console.log(this.$refs.videoPlayer.player.currentTime());</span><br><span class="line">    &#125;,</span><br><span class="line">    onPlayerLoadeddata () &#123;</span><br><span class="line">      this.videoDuration = this.$refs.videoPlayer.player.duration();</span><br><span class="line">      this.$refs.videoPlayer.player.currentTime(5);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  computed: &#123;</span><br><span class="line"></span><br><span class="line">  &#125;,</span><br><span class="line">  mounted () &#123;</span><br><span class="line">    let data = this.playerOptions.sources[0].src;</span><br><span class="line">    console.log(data);</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style lang=&quot;scss&quot;&gt;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<p>– THE END –</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/04/16/vue中video播放.m3u8格式/" data-id="ck9mjm7ak000rdsur57n9dbl5" class="article-share-link">Share</a>
+      
+      
     </footer>
   </div>
   
@@ -305,95 +350,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/04/16/ckeditor自定义菜单项/" data-id="ck9mjhdxv0004s0urzg7ryqac" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-vue中video播放.m3u8格式" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/04/16/vue中video播放.m3u8格式/" class="article-date">
-  <time datetime="2020-04-16T14:12:00.000Z" itemprop="datePublished">2020-04-16</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/video-m3u8/">video.m3u8</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/16/vue中video播放.m3u8格式/">vue中video播放.m3u8格式</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="引入插件"><a href="#引入插件" class="headerlink" title="引入插件"></a>引入插件</h1><p>“videojs-contrib-hls.js”: “^3.2.0”,<br>“vue-video-player”: “^5.0.2”,</p>
-<h3 id="main-js"><a href="#main-js" class="headerlink" title="main.js"></a>main.js</h3><p>import VueVideoPlayer from ‘vue-video-player’;<br>Vue.use(VueVideoPlayer);</p>
-<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;div class=&quot;player-container&quot;&gt;</span><br><span class="line">      &lt;video-player class=&quot;vjs-custom-skin&quot; ref=&quot;videoPlayer&quot; :options=&quot;playerOptions&quot; @play=&quot;onPlayerPlay($event)&quot;</span><br><span class="line">                @pause=&quot;onPlayerPause($event)&quot;</span><br><span class="line">                @loadeddata=&quot;onPlayerLoadeddata($event)&quot;&gt;&lt;/video-player&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">// 引入video样式</span><br><span class="line">import &apos;video.js/dist/video-js.css&apos;;</span><br><span class="line">import &apos;vue-video-player/src/custom-theme.css&apos;;</span><br><span class="line"></span><br><span class="line">// 引入hls.js</span><br><span class="line">import &apos;videojs-contrib-hls.js/src/videojs.hlsjs&apos;;</span><br><span class="line"></span><br><span class="line">export default &#123;</span><br><span class="line">  data () &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      playerOptions: &#123;</span><br><span class="line">        playbackRates: [0.7, 1.0, 1.5, 2.0], // 播放速度</span><br><span class="line">        autoplay: false, // 如果true,浏览器准备好时开始回放。</span><br><span class="line">        controls: true, // 控制条</span><br><span class="line">        preload: &apos;auto&apos;, // 视频预加载</span><br><span class="line">        muted: false, // 默认情况下将会消除任何音频。</span><br><span class="line">        loop: false, // 导致视频一结束就重新开始。</span><br><span class="line">        language: &apos;zh-CN&apos;,</span><br><span class="line">        aspectRatio: &apos;16:9&apos;, // 将播放器置于流畅模式，并在计算播放器的动态大小时使用该值。值应该代表一个比例 - 用冒号分隔的两个数字（例如&quot;16:9&quot;或&quot;4:3&quot;）</span><br><span class="line">        fluid: true, // 当true时，Video.js player将拥有流体大小。换句话说，它将按比例缩放以适应其容器。</span><br><span class="line">        sources: [&#123;</span><br><span class="line">          type: &apos;application/x-mpegURL&apos;,</span><br><span class="line">          src: hlsUrl</span><br><span class="line">        &#125;],</span><br><span class="line">        poster: &apos;http://static.smartisanos.cn/pr/img/video/video_03_cc87ce5bdb.jpg&apos;, // 你的封面地址</span><br><span class="line">        width: document.documentElement.clientWidth,</span><br><span class="line">        notSupportedMessage: &apos;此视频暂无法播放，请稍后再试&apos; // 允许覆盖Video.js无法播放媒体源时显示的默认信息。</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    onPlayerPlay (player) &#123;</span><br><span class="line">      console.log(&apos;开始播放&apos;);</span><br><span class="line">    &#125;,</span><br><span class="line">    onPlayerPause () &#123;</span><br><span class="line">      console.log(&apos;暂停播放&apos;);</span><br><span class="line">      console.log(this.$refs.videoPlayer.player.currentTime());</span><br><span class="line">    &#125;,</span><br><span class="line">    onPlayerLoadeddata () &#123;</span><br><span class="line">      this.videoDuration = this.$refs.videoPlayer.player.duration();</span><br><span class="line">      this.$refs.videoPlayer.player.currentTime(5);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  computed: &#123;</span><br><span class="line"></span><br><span class="line">  &#125;,</span><br><span class="line">  mounted () &#123;</span><br><span class="line">    let data = this.playerOptions.sources[0].src;</span><br><span class="line">    console.log(data);</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style lang=&quot;scss&quot;&gt;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
-
-<p>– THE END –</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/04/16/vue中video播放.m3u8格式/" data-id="ck9mjhdyc000ss0urh0qvhfrd" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-vueAndIframe" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/12/25/vueAndIframe/" class="article-date">
-  <time datetime="2019-12-25T10:00:00.000Z" itemprop="datePublished">2019-12-25</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/解决办法/">解决办法</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/25/vueAndIframe/">vue引入iframe的问题总结</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="由于管理系统里面要有全屏大屏展示的需求所以迫不得已采用vue里面套用iframe方式，全屏操作时让包裹iframe的div"><a href="#由于管理系统里面要有全屏大屏展示的需求所以迫不得已采用vue里面套用iframe方式，全屏操作时让包裹iframe的div" class="headerlink" title="由于管理系统里面要有全屏大屏展示的需求所以迫不得已采用vue里面套用iframe方式，全屏操作时让包裹iframe的div"></a>由于管理系统里面要有全屏大屏展示的需求所以迫不得已采用vue里面套用iframe方式，全屏操作时让包裹iframe的div</h2><h3 id="1-给window绑定了addEventListener事件，然后在离开组件的时候调用removeEventListener移除事件，但是发现没有生效"><a href="#1-给window绑定了addEventListener事件，然后在离开组件的时候调用removeEventListener移除事件，但是发现没有生效" class="headerlink" title="1.给window绑定了addEventListener事件，然后在离开组件的时候调用removeEventListener移除事件，但是发现没有生效"></a>1.给window绑定了addEventListener事件，然后在离开组件的时候调用removeEventListener移除事件，但是发现没有生效</h3><h2 id="正确示例"><a href="#正确示例" class="headerlink" title="正确示例"></a>正确示例</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">created() &#123;</span><br><span class="line">    window.addEventListener(&apos;onmessageWS&apos;, this.wsFunc)</span><br><span class="line">  &#125;,</span><br><span class="line">  beforeDestroy() &#123;</span><br><span class="line">    window.removeEventListener(&apos;onmessageWS&apos;, this.wsFunc)</span><br><span class="line">  &#125;,</span><br><span class="line">methods: &#123;</span><br><span class="line">  wsFunc(e) &#123;</span><br><span class="line">     console.log(1111)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>– THE END –</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/12/25/vueAndIframe/" data-id="ck9mjhdy9000ns0urx44zmpwc" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/04/16/ckeditor自定义菜单项/" data-id="ck9mjm79y0001dsurr0a2j9t0" class="article-share-link">Share</a>
       
       
     </footer>
@@ -437,7 +394,50 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/12/25/html2pdf/" data-id="ck9mjhdy5000is0ur0qwz8bra" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/12/25/html2pdf/" data-id="ck9mjm7ac000hdsury6l0kzra" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-vueAndIframe" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/12/25/vueAndIframe/" class="article-date">
+  <time datetime="2019-12-25T10:00:00.000Z" itemprop="datePublished">2019-12-25</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/解决办法/">解决办法</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/12/25/vueAndIframe/">vue引入iframe的问题总结</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="由于管理系统里面要有全屏大屏展示的需求所以迫不得已采用vue里面套用iframe方式，全屏操作时让包裹iframe的div"><a href="#由于管理系统里面要有全屏大屏展示的需求所以迫不得已采用vue里面套用iframe方式，全屏操作时让包裹iframe的div" class="headerlink" title="由于管理系统里面要有全屏大屏展示的需求所以迫不得已采用vue里面套用iframe方式，全屏操作时让包裹iframe的div"></a>由于管理系统里面要有全屏大屏展示的需求所以迫不得已采用vue里面套用iframe方式，全屏操作时让包裹iframe的div</h2><h3 id="1-给window绑定了addEventListener事件，然后在离开组件的时候调用removeEventListener移除事件，但是发现没有生效"><a href="#1-给window绑定了addEventListener事件，然后在离开组件的时候调用removeEventListener移除事件，但是发现没有生效" class="headerlink" title="1.给window绑定了addEventListener事件，然后在离开组件的时候调用removeEventListener移除事件，但是发现没有生效"></a>1.给window绑定了addEventListener事件，然后在离开组件的时候调用removeEventListener移除事件，但是发现没有生效</h3><h2 id="正确示例"><a href="#正确示例" class="headerlink" title="正确示例"></a>正确示例</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">created() &#123;</span><br><span class="line">    window.addEventListener(&apos;onmessageWS&apos;, this.wsFunc)</span><br><span class="line">  &#125;,</span><br><span class="line">  beforeDestroy() &#123;</span><br><span class="line">    window.removeEventListener(&apos;onmessageWS&apos;, this.wsFunc)</span><br><span class="line">  &#125;,</span><br><span class="line">methods: &#123;</span><br><span class="line">  wsFunc(e) &#123;</span><br><span class="line">     console.log(1111)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>– THE END –</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/12/25/vueAndIframe/" data-id="ck9mjm7ag000ldsurdafacy75" class="article-share-link">Share</a>
       
       
     </footer>
@@ -482,7 +482,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/11/10/多行文本溢出终极解决办法/" data-id="ck9mjhdyf000ws0ur26vz56uu" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/11/10/多行文本溢出终极解决办法/" data-id="ck9mjm7an000wdsury4hah0bm" class="article-share-link">Share</a>
       
       
     </footer>
@@ -524,7 +524,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/09/12/文件流下载/" data-id="ck9mjhdyg000zs0urt0e4jos2" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/09/12/文件流下载/" data-id="ck9mjm7ap0011dsurrkig9twy" class="article-share-link">Share</a>
       
       
     </footer>
@@ -588,7 +588,7 @@ getRowClass(row, index) {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/09/06/element表格折叠问题/" data-id="ck9mjhdy0000as0uriyluuzgq" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/09/06/element表格折叠问题/" data-id="ck9mjm7a50006dsur3tw0gkex" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/element/">element</a></li></ul>
@@ -660,11 +660,11 @@ getRowClass(row, index) {
           </li>
         
           <li>
-            <a href="/2020/04/16/ckeditor自定义菜单项/">ckeditor自定义菜单项</a>
+            <a href="/2020/04/16/vue中video播放.m3u8格式/">vue中video播放.m3u8格式</a>
           </li>
         
           <li>
-            <a href="/2020/04/16/vue中video播放.m3u8格式/">vue中video播放.m3u8格式</a>
+            <a href="/2020/04/16/ckeditor自定义菜单项/">ckeditor自定义菜单项</a>
           </li>
         
       </ul>
